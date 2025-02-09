@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+
 struct LearnTermsApp: App {
     var body: some Scene {
         WindowGroup {

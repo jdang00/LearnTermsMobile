@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import Clerk
+
 
 struct ContentView: View {
+    @Environment(Clerk.self) private var clerk
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if let user = clerk.user{
+            MainTabView()
+
+        }else{
+            SignUpOrSignInView()
         }
-        .padding()
     }
 }
 

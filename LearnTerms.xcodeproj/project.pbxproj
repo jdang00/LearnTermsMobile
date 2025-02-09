@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DD421F852D56FE6600A138A7 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD421F842D56FE6500A138A7 /* Package.swift */; };
+		DD421FAE2D5702E300A138A7 /* Clerk in Frameworks */ = {isa = PBXBuildFile; productRef = DD421FAD2D5702E300A138A7 /* Clerk */; };
+		DD421FB12D5702FA00A138A7 /* ClerkQuickstartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD421FB02D5702FA00A138A7 /* ClerkQuickstartApp.swift */; };
+		DDB159E02D56F88F00272C42 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB159DF2D56F88C00272C42 /* Supabase.swift */; };
+		DDB159E52D56FAFA00272C42 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DDB159E42D56FAFA00272C42 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DDB159A42D569EF100272C42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,12 +32,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD421F842D56FE6500A138A7 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		DD421FB02D5702FA00A138A7 /* ClerkQuickstartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClerkQuickstartApp.swift; sourceTree = "<group>"; };
 		DDB159922D569EF000272C42 /* LearnTerms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnTerms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB159A32D569EF100272C42 /* LearnTermsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnTermsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB159AD2D569EF100272C42 /* LearnTermsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnTermsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB159DF2D56F88C00272C42 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		DD4106262D57C28600E05366 /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD421FB22D57037100A138A7 /* Auth */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		DDB159942D569EF000272C42 /* LearnTerms */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LearnTerms;
@@ -52,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD421FAE2D5702E300A138A7 /* Clerk in Frameworks */,
+				DDB159E52D56FAFA00272C42 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +98,15 @@
 		DDB159892D569EF000272C42 = {
 			isa = PBXGroup;
 			children = (
+				DD4106262D57C28600E05366 /* Extensions */,
+				DD421FB22D57037100A138A7 /* Auth */,
+				DD421FB02D5702FA00A138A7 /* ClerkQuickstartApp.swift */,
+				DD421F842D56FE6500A138A7 /* Package.swift */,
+				DDB159DF2D56F88C00272C42 /* Supabase.swift */,
 				DDB159942D569EF000272C42 /* LearnTerms */,
 				DDB159A62D569EF100272C42 /* LearnTermsTests */,
 				DDB159B02D569EF100272C42 /* LearnTermsUITests */,
+				DDB159E32D56FAFA00272C42 /* Frameworks */,
 				DDB159932D569EF000272C42 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +119,13 @@
 				DDB159AD2D569EF100272C42 /* LearnTermsUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DDB159E32D56FAFA00272C42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,10 +144,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				DD4106262D57C28600E05366 /* Extensions */,
+				DD421FB22D57037100A138A7 /* Auth */,
 				DDB159942D569EF000272C42 /* LearnTerms */,
 			);
 			name = LearnTerms;
 			packageProductDependencies = (
+				DDB159E42D56FAFA00272C42 /* Supabase */,
+				DD421FAD2D5702E300A138A7 /* Clerk */,
 			);
 			productName = LearnTerms;
 			productReference = DDB159922D569EF000272C42 /* LearnTerms.app */;
@@ -195,6 +235,10 @@
 			);
 			mainGroup = DDB159892D569EF000272C42;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DDB159DE2D56F82D00272C42 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				DD421FAC2D5702D900A138A7 /* XCRemoteSwiftPackageReference "clerk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DDB159932D569EF000272C42 /* Products */;
 			projectDirPath = "";
@@ -236,6 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB159E02D56F88F00272C42 /* Supabase.swift in Sources */,
+				DD421F852D56FE6600A138A7 /* Package.swift in Sources */,
+				DD421FB12D5702FA00A138A7 /* ClerkQuickstartApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnTerms/Preview Content\"";
+				DEVELOPMENT_TEAM = 84A8DB6F25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -429,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnTerms/Preview Content\"";
+				DEVELOPMENT_TEAM = 84A8DB6F25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -583,6 +632,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD421FAC2D5702D900A138A7 /* XCRemoteSwiftPackageReference "clerk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clerk/clerk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.48.0;
+			};
+		};
+		DDB159DE2D56F82D00272C42 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD421FAD2D5702E300A138A7 /* Clerk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD421FAC2D5702D900A138A7 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = Clerk;
+		};
+		DDB159E42D56FAFA00272C42 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB159DE2D56F82D00272C42 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDB1598A2D569EF000272C42 /* Project object */;
 }
