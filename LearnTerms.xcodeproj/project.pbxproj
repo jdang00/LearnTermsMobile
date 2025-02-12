@@ -41,6 +41,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		DD2903432D5D32F6009820AA /* Quiz */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Quiz;
+			sourceTree = "<group>";
+		};
 		DD4106262D57C28600E05366 /* Extensions */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Extensions;
@@ -98,6 +103,7 @@
 		DDB159892D569EF000272C42 = {
 			isa = PBXGroup;
 			children = (
+				DD2903432D5D32F6009820AA /* Quiz */,
 				DD4106262D57C28600E05366 /* Extensions */,
 				DD421FB22D57037100A138A7 /* Auth */,
 				DD421FB02D5702FA00A138A7 /* ClerkQuickstartApp.swift */,
@@ -144,6 +150,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				DD2903432D5D32F6009820AA /* Quiz */,
 				DD4106262D57C28600E05366 /* Extensions */,
 				DD421FB22D57037100A138A7 /* Auth */,
 				DDB159942D569EF000272C42 /* LearnTerms */,

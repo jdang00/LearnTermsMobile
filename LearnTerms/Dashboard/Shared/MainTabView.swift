@@ -6,7 +6,7 @@ struct MainTabView: View {
     
     // Sample data to use before fetching.
     let sampleChapters = [
-        Chapter(name: "Intro", desc: "Just an intro", numprobs: 30, chapter: 1, emoji: "💊"),
+        Chapter(name: "Loading", desc: "Loading chapters", numprobs: 30, chapter: 1, emoji: "💊"),
     ]
     
     let sampleUser = MockUser(firstName: "John", imageUrl: "person.crop.circle")
@@ -26,7 +26,7 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }
-        }
+        }.accentColor(Color.theme.primary) 
         // Show an overlay ProgressView when chapters are loading.
         .overlay {
             if pharmChapters.isEmpty {

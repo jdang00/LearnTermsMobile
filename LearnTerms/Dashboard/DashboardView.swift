@@ -15,16 +15,13 @@ struct DashboardView: View {
     let enabledThreshold: Int
     
     var body: some View {
-        // Use a single NavigationView on iPhone (compact)...
         if horizontalSizeClass == .compact {
             NavigationView {
                 dashboardList
                     .navigationTitle("Dashboard")
             }
         } else {
-            // ...and a NavigationSplitView on iPad (regular).
             NavigationSplitView {
-                // Sidebar content (customize as needed)
                 Text("Menu")
                     .frame(maxWidth: 200)
                     .navigationTitle("Menu")
@@ -35,19 +32,20 @@ struct DashboardView: View {
         }
     }
     
-    // A reusable list view that displays the chapters.
     private var dashboardList: some View {
         List(chapters) { chapter in
-            HStack {
-                Text(chapter.emoji)
-                VStack(alignment: .leading) {
-                    Text(chapter.name)
-                        .font(.headline)
-                    Text(chapter.desc)
-                        .font(.subheadline)
+            NavigationLink(destination: QuizView(chapter: chapter)) {
+                HStack {
+                    Text(chapter.emoji)
+                    VStack(alignment: .leading) {
+                        Text(chapter.name)
+                            .font(.headline)
+                        Text(chapter.desc)
+                            .font(.subheadline)
+                    }
                 }
+                .padding(.vertical, 4)
             }
-            .padding(.vertical, 4)
         }
     }
 }
